@@ -6,7 +6,7 @@
         <title>qrtool-decode(1) · qrtool Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 4.0.7">
+        <meta name="generator" content="HonKit 4.0.8">
         <meta name="author" content="Shun Sakai">
         
         
@@ -314,11 +314,13 @@ By default, the result will be output to stdout.</p>
 <dt class="hdlist1"><em>IMAGE</em></dt>
 <dd>
 <p>Input image file.
-If it is not specified, or if &quot;-&quot; is specified, the image will be read from
-stdin.
-Supported raster image formats are any formats supported by the image crate.
-The format guess based on the extension, and the raster format use the
-content in addition to it.
+If <em>IMAGE</em> is not specified, or if &quot;-&quot; is specified, the image will be read
+from stdin.
+Supported raster image formats are based on the formats supported by the
+image crate.
+The format of <em>IMAGE</em> is determined based on the extension or the magic
+number if possible.
+If the format cannot be determined, use <strong>--type</strong>.
 Note that the SVG image is rasterized before scanning.</p>
 </dd>
 </dl>
@@ -333,8 +335,8 @@ Note that the SVG image is rasterized before scanning.</p>
 <dt class="hdlist1"><strong>-t</strong>, <strong>--type</strong> <em>FORMAT</em></dt>
 <dd>
 <p>The format of the input.
-If it is not specified, the format will be guessed based on the extension,
-and the raster format will use the content in addition to it.</p>
+If <em>FORMAT</em> is not specified, the format is determined based on the extension
+or the magic number.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">The possible values are:</dt>
@@ -355,7 +357,7 @@ and the raster format will use the content in addition to it.</p>
 </dd>
 <dt class="hdlist1"><strong>gif</strong></dt>
 <dd>
-<p>GIF.</p>
+<p>Graphics Interchange Format.</p>
 </dd>
 <dt class="hdlist1"><strong>hdr</strong></dt>
 <dd>
@@ -363,7 +365,8 @@ and the raster format will use the content in addition to it.</p>
 </dd>
 <dt class="hdlist1"><strong>ico</strong></dt>
 <dd>
-<p>ICO.</p>
+<p>ICO file format.
+This value also includes the CUR file format.</p>
 </dd>
 <dt class="hdlist1"><strong>jpeg</strong></dt>
 <dd>
@@ -379,7 +382,11 @@ and the raster format will use the content in addition to it.</p>
 </dd>
 <dt class="hdlist1"><strong>pnm</strong></dt>
 <dd>
-<p>PNM.</p>
+<p>Portable Anymap Format.</p>
+</dd>
+<dt class="hdlist1"><strong>qoi</strong></dt>
+<dd>
+<p>Quite OK Image Format.</p>
 </dd>
 <dt class="hdlist1"><strong>tga</strong></dt>
 <dd>
@@ -387,7 +394,7 @@ and the raster format will use the content in addition to it.</p>
 </dd>
 <dt class="hdlist1"><strong>tiff</strong></dt>
 <dd>
-<p>TIFF.</p>
+<p>Tag Image File Format.</p>
 </dd>
 <dt class="hdlist1"><strong>webp</strong></dt>
 <dd>
@@ -403,13 +410,13 @@ and the raster format will use the content in addition to it.</p>
 <dd>
 <p>Also print the metadata.
 It is output to stderr.
-This conflicts with <strong>--metadata</strong>.</p>
+This option conflicts with <strong>--metadata</strong>.</p>
 </dd>
 <dt class="hdlist1"><strong>--metadata</strong></dt>
 <dd>
 <p>Print only the metadata.
 It is output to stderr.
-This conflicts with <strong>--verbose</strong>.</p>
+This option conflicts with <strong>--verbose</strong>.</p>
 </dd>
 <dt class="hdlist1"><strong>-h</strong>, <strong>--help</strong></dt>
 <dd>
@@ -469,6 +476,27 @@ This conflicts with <strong>--verbose</strong>.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_notes">NOTES</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Source repository:</dt>
+<dd>
+<p><a href="https://github.com/sorairolake/qrtool" class="bare" target="_blank">https://github.com/sorairolake/qrtool</a></p>
+</dd>
+<dt class="hdlist1">QR code.com:</dt>
+<dd>
+<p><a href="https://www.qrcode.com/" class="bare" target="_blank">https://www.qrcode.com/</a></p>
+</dd>
+<dt class="hdlist1">image crate:</dt>
+<dd>
+<p><a href="https://crates.io/crates/image" class="bare" target="_blank">https://crates.io/crates/image</a></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_examples">EXAMPLES</h2>
 <div class="sectionbody">
 <div class="dlist">
@@ -500,9 +528,17 @@ This conflicts with <strong>--verbose</strong>.</p>
 <div class="paragraph">
 <p>Copyright © 2022-2023 Shun Sakai</p>
 </div>
-<div class="paragraph">
-<p>This program is distributed under the terms of either the Apache License 2.0 or
-the MIT License.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>This program is distributed under the terms of either the Apache License 2.0
+or the MIT License.</p>
+</li>
+<li>
+<p>This manual page is distributed under the terms of the Creative Commons
+Attribution 4.0 International Public License.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>This is free software: you are free to change and redistribute it.
@@ -514,7 +550,7 @@ There is NO WARRANTY, to the extent permitted by law.</p>
 <h2 id="_see_also">SEE ALSO</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>qrtool</strong>(1), <strong>qrtool-encode</strong>(1)</p>
+<p><strong>qrtool</strong>(1), <strong>qrtool-encode</strong>(1), <strong>zbarimg</strong>(1)</p>
 </div>
 </div>
 </div>
@@ -560,7 +596,7 @@ There is NO WARRANTY, to the extent permitted by law.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"qrtool-decode(1)","level":"3.3","depth":1,"next":{"title":"Changelog","level":"4.1","depth":1,"path":"CHANGELOG.adoc","ref":"CHANGELOG.adoc","articles":[]},"previous":{"title":"qrtool-encode(1)","level":"3.2","depth":1,"path":"man/qrtool-encode.1.adoc","ref":"man/qrtool-encode.1.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"doc/book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Shun Sakai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"qrtool Documentation","language":"en","gitbook":"*"},"file":{"path":"man/qrtool-decode.1.adoc","mtime":"2023-06-12T10:46:41.525Z","type":"asciidoc"},"gitbook":{"version":"4.0.7","time":"2023-06-12T10:46:42.456Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"qrtool-decode(1)","level":"3.3","depth":1,"next":{"title":"Changelog","level":"4.1","depth":1,"path":"CHANGELOG.adoc","ref":"CHANGELOG.adoc","articles":[]},"previous":{"title":"qrtool-encode(1)","level":"3.2","depth":1,"path":"man/qrtool-encode.1.adoc","ref":"man/qrtool-encode.1.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"doc/book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Shun Sakai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"qrtool Documentation","language":"en","gitbook":"*"},"file":{"path":"man/qrtool-decode.1.adoc","mtime":"2023-07-12T15:37:59.460Z","type":"asciidoc"},"gitbook":{"version":"4.0.8","time":"2023-07-12T15:38:00.291Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
