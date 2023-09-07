@@ -6,7 +6,7 @@
         <title>qrtool-decode(1) · qrtool Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 5.0.0">
+        <meta name="generator" content="HonKit 5.1.0">
         <meta name="author" content="Shun Sakai">
         
         
@@ -314,8 +314,8 @@
 <h2 id="_description">DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This command detects and decodes a QR code.
-By default, the result will be output to stdout.</p>
+<p>This command detects and decodes a QR code. By default, the result will be
+output to stdout.</p>
 </div>
 </div>
 </div>
@@ -326,15 +326,12 @@ By default, the result will be output to stdout.</p>
 <dl>
 <dt class="hdlist1"><em>IMAGE</em></dt>
 <dd>
-<p>Input image file.
-If <em>IMAGE</em> is not specified, or if &quot;-&quot; is specified, the image will be read
-from stdin.
-Supported raster image formats are based on the formats supported by the
-image crate.
-The format of <em>IMAGE</em> is determined based on the extension or the magic
-number if possible.
-If the format cannot be determined, use <strong>--type</strong>.
-Note that the SVG image is rasterized before scanning.</p>
+<p>Input image file. If <em>IMAGE</em> is not specified, or if &quot;-&quot; is specified, the
+image will be read from stdin. Supported raster image formats are based on
+the formats supported by the image crate. The format of <em>IMAGE</em> is determined
+based on the extension or the magic number if possible. If the format cannot
+be determined, use <strong>--type</strong>. Note that the SVG image is rasterized before
+scanning.</p>
 </dd>
 </dl>
 </div>
@@ -347,9 +344,8 @@ Note that the SVG image is rasterized before scanning.</p>
 <dl>
 <dt class="hdlist1"><strong>-t</strong>, <strong>--type</strong> <em>FORMAT</em></dt>
 <dd>
-<p>The format of the input.
-If <em>FORMAT</em> is not specified, the format is determined based on the extension
-or the magic number.</p>
+<p>The format of the input. If <em>FORMAT</em> is not specified, the format is
+determined based on the extension or the magic number.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">The possible values are:</dt>
@@ -378,8 +374,7 @@ or the magic number.</p>
 </dd>
 <dt class="hdlist1"><strong>ico</strong></dt>
 <dd>
-<p>ICO file format.
-This value also includes the CUR file format.</p>
+<p>ICO file format. This value also includes the CUR file format.</p>
 </dd>
 <dt class="hdlist1"><strong>jpeg</strong></dt>
 <dd>
@@ -403,8 +398,8 @@ This value also includes the CUR file format.</p>
 </dd>
 <dt class="hdlist1"><strong>svg</strong></dt>
 <dd>
-<p>Scalable Vector Graphics.
-This value also includes the gzip-compressed SVG image.</p>
+<p>Scalable Vector Graphics. This value also includes the gzip-compressed
+SVG image.</p>
 </dd>
 <dt class="hdlist1"><strong>tga</strong></dt>
 <dd>
@@ -426,15 +421,13 @@ This value also includes the gzip-compressed SVG image.</p>
 </dd>
 <dt class="hdlist1"><strong>--verbose</strong></dt>
 <dd>
-<p>Also print the metadata.
-It is output to stderr.
-This option conflicts with <strong>--metadata</strong>.</p>
+<p>Also print the metadata. It is output to stderr. This option conflicts with
+<strong>--metadata</strong>.</p>
 </dd>
 <dt class="hdlist1"><strong>--metadata</strong></dt>
 <dd>
-<p>Print only the metadata.
-It is output to stderr.
-This option conflicts with <strong>--verbose</strong>.</p>
+<p>Print only the metadata. It is output to stderr. This option conflicts with
+<strong>--verbose</strong>.</p>
 </dd>
 <dt class="hdlist1"><strong>-h</strong>, <strong>--help</strong></dt>
 <dd>
@@ -559,8 +552,8 @@ Attribution 4.0 International Public License.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.</p>
+<p>This is free software: you are free to change and redistribute it. There is NO
+WARRANTY, to the extent permitted by law.</p>
 </div>
 </div>
 </div>
@@ -614,7 +607,7 @@ There is NO WARRANTY, to the extent permitted by law.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"qrtool-decode(1)","level":"3.3","depth":1,"next":{"title":"qrtool-help(1)","level":"3.4","depth":1,"path":"man/qrtool-help.1.adoc","ref":"man/qrtool-help.1.adoc","articles":[]},"previous":{"title":"qrtool-encode(1)","level":"3.2","depth":1,"path":"man/qrtool-encode.1.adoc","ref":"man/qrtool-encode.1.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"doc/book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Shun Sakai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"qrtool Documentation","language":"en","gitbook":"*"},"file":{"path":"man/qrtool-decode.1.adoc","mtime":"2023-08-09T14:53:21.408Z","type":"asciidoc"},"gitbook":{"version":"5.0.0","time":"2023-08-09T14:53:22.443Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"qrtool-decode(1)","level":"3.3","depth":1,"next":{"title":"qrtool-help(1)","level":"3.4","depth":1,"path":"man/qrtool-help.1.adoc","ref":"man/qrtool-help.1.adoc","articles":[]},"previous":{"title":"qrtool-encode(1)","level":"3.2","depth":1,"path":"man/qrtool-encode.1.adoc","ref":"man/qrtool-encode.1.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"doc/book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Shun Sakai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"qrtool Documentation","language":"en","gitbook":"*"},"file":{"path":"man/qrtool-decode.1.adoc","mtime":"2023-09-07T10:44:13.859Z","type":"asciidoc"},"gitbook":{"version":"5.1.0","time":"2023-09-07T10:44:14.700Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

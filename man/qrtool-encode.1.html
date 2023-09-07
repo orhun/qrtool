@@ -6,7 +6,7 @@
         <title>qrtool-encode(1) · qrtool Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 5.0.0">
+        <meta name="generator" content="HonKit 5.1.0">
         <meta name="author" content="Shun Sakai">
         
         
@@ -314,8 +314,8 @@
 <h2 id="_description">DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This command encodes input data in a QR code.
-By default, the result will be output to stdout.</p>
+<p>This command encodes input data in a QR code. By default, the result will be
+output to stdout.</p>
 </div>
 </div>
 </div>
@@ -326,12 +326,10 @@ By default, the result will be output to stdout.</p>
 <dl>
 <dt class="hdlist1"><em>STRING</em></dt>
 <dd>
-<p>Input data.
-If <em>STRING</em> is not specified, data will be read from stdin.
-<em>STRING</em> must be a valid UTF-8 string.
-Use <strong>--read-from</strong> or read from stdin if taking other than a valid UTF-8
-string.
-This positional argument conflicts with <strong>--read-from</strong>.</p>
+<p>Input data. If <em>STRING</em> is not specified, data will be read from stdin.
+<em>STRING</em> must be a valid UTF-8 string. Use <strong>--read-from</strong> or read from stdin
+if taking other than a valid UTF-8 string. This positional argument conflicts
+with <strong>--read-from</strong>.</p>
 </dd>
 </dl>
 </div>
@@ -348,8 +346,7 @@ This positional argument conflicts with <strong>--read-from</strong>.</p>
 </dd>
 <dt class="hdlist1"><strong>-r</strong>, <strong>--read-from</strong> <em>FILE</em></dt>
 <dd>
-<p>Read input data from a file.
-This option conflicts with <em>STRING</em>.</p>
+<p>Read input data from a file. This option conflicts with <em>STRING</em>.</p>
 </dd>
 <dt class="hdlist1"><strong>-l</strong>, <strong>--error-correction-level</strong> <em>LEVEL</em></dt>
 <dd>
@@ -362,24 +359,19 @@ This option conflicts with <em>STRING</em>.</p>
 <dl>
 <dt class="hdlist1"><strong>l</strong></dt>
 <dd>
-<p>Level L.
-7% of codewords can be restored.</p>
+<p>Level L. 7% of codewords can be restored.</p>
 </dd>
 <dt class="hdlist1"><strong>m</strong></dt>
 <dd>
-<p>Level M.
-15% of codewords can be restored.
-This is the default value.</p>
+<p>Level M. 15% of codewords can be restored. This is the default value.</p>
 </dd>
 <dt class="hdlist1"><strong>q</strong></dt>
 <dd>
-<p>Level Q.
-25% of codewords can be restored.</p>
+<p>Level Q. 25% of codewords can be restored.</p>
 </dd>
 <dt class="hdlist1"><strong>h</strong></dt>
 <dd>
-<p>Level H.
-30% of codewords can be restored.</p>
+<p>Level H. 30% of codewords can be restored.</p>
 </dd>
 </dl>
 </div>
@@ -393,9 +385,8 @@ This is the default value.</p>
 </dd>
 <dt class="hdlist1"><strong>-v</strong>, <strong>--symbol-version</strong> <em>NUMBER</em></dt>
 <dd>
-<p>The version of the symbol.
-For normal QR code, <em>NUMBER</em> should be between <strong>1</strong> and <strong>40</strong>.
-For Micro QR code, <em>NUMBER</em> should be between <strong>1</strong> and <strong>4</strong>.</p>
+<p>The version of the symbol. For normal QR code, <em>NUMBER</em> should be between <strong>1</strong>
+and <strong>40</strong>. For Micro QR code, <em>NUMBER</em> should be between <strong>1</strong> and <strong>4</strong>.</p>
 </dd>
 <dt class="hdlist1"><strong>--symversion</strong> <em>NUMBER</em></dt>
 <dd>
@@ -403,8 +394,7 @@ For Micro QR code, <em>NUMBER</em> should be between <strong>1</strong> and <str
 </dd>
 <dt class="hdlist1"><strong>-m</strong>, <strong>--margin</strong> <em>NUMBER</em></dt>
 <dd>
-<p>The width of margin.
-Default is 4.</p>
+<p>The width of margin. Default is 4.</p>
 </dd>
 <dt class="hdlist1"><strong>-t</strong>, <strong>--type</strong> <em>FORMAT</em></dt>
 <dd>
@@ -417,9 +407,8 @@ Default is 4.</p>
 <dl>
 <dt class="hdlist1"><strong>png</strong></dt>
 <dd>
-<p>Portable Network Graphics.
-This outputs 32-bit RGBA PNG image.
-This is the default value.</p>
+<p>Portable Network Graphics. This outputs 32-bit RGBA PNG image. This is
+the default value.</p>
 </dd>
 <dt class="hdlist1"><strong>svg</strong></dt>
 <dd>
@@ -454,8 +443,7 @@ This is the default value.</p>
 </dd>
 <dt class="hdlist1"><strong>byte</strong></dt>
 <dd>
-<p>Arbitrary binary data.
-This is the default value.</p>
+<p>Arbitrary binary data. This is the default value.</p>
 </dd>
 <dt class="hdlist1"><strong>kanji</strong></dt>
 <dd>
@@ -469,8 +457,7 @@ This is the default value.</p>
 </dd>
 <dt class="hdlist1"><strong>--variant</strong> <em>TYPE</em></dt>
 <dd>
-<p>The type of QR code.
-This option requires <strong>--symbol-version</strong>.</p>
+<p>The type of QR code. This option requires <strong>--symbol-version</strong>.</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">The possible values are:</dt>
@@ -479,8 +466,7 @@ This option requires <strong>--symbol-version</strong>.</p>
 <dl>
 <dt class="hdlist1"><strong>normal</strong></dt>
 <dd>
-<p>Normal QR code.
-This is the default value.</p>
+<p>Normal QR code. This is the default value.</p>
 </dd>
 <dt class="hdlist1"><strong>micro</strong></dt>
 <dd>
@@ -494,20 +480,15 @@ This is the default value.</p>
 </dd>
 <dt class="hdlist1"><strong>--foreground</strong> <em>COLOR</em></dt>
 <dd>
-<p>Foreground color.
-<em>COLOR</em> takes a CSS color string.
-Default is black.</p>
+<p>Foreground color. <em>COLOR</em> takes a CSS color string. Default is black.</p>
 </dd>
 <dt class="hdlist1"><strong>--background</strong> <em>COLOR</em></dt>
 <dd>
-<p>Background color.
-<em>COLOR</em> takes a CSS color string.
-Default is white.</p>
+<p>Background color. <em>COLOR</em> takes a CSS color string. Default is white.</p>
 </dd>
 <dt class="hdlist1"><strong>--verbose</strong></dt>
 <dd>
-<p>Also print the metadata.
-It is output to stderr.</p>
+<p>Also print the metadata. It is output to stderr.</p>
 </dd>
 <dt class="hdlist1"><strong>-h</strong>, <strong>--help</strong></dt>
 <dd>
@@ -594,7 +575,7 @@ It is output to stderr.</p>
 <dl>
 <dt class="hdlist1">Encode the given string in a QR code:</dt>
 <dd>
-<p>$ <strong>qrtool encode &quot;QR code&quot;</strong></p>
+<p>$ <strong>qrtool encode &quot;QR code&quot; &gt; output.png</strong></p>
 </dd>
 </dl>
 </div>
@@ -632,8 +613,8 @@ Attribution 4.0 International Public License.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.</p>
+<p>This is free software: you are free to change and redistribute it. There is NO
+WARRANTY, to the extent permitted by law.</p>
 </div>
 </div>
 </div>
@@ -687,7 +668,7 @@ There is NO WARRANTY, to the extent permitted by law.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"qrtool-encode(1)","level":"3.2","depth":1,"next":{"title":"qrtool-decode(1)","level":"3.3","depth":1,"path":"man/qrtool-decode.1.adoc","ref":"man/qrtool-decode.1.adoc","articles":[]},"previous":{"title":"qrtool(1)","level":"3.1","depth":1,"path":"man/qrtool.1.adoc","ref":"man/qrtool.1.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"doc/book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Shun Sakai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"qrtool Documentation","language":"en","gitbook":"*"},"file":{"path":"man/qrtool-encode.1.adoc","mtime":"2023-08-09T14:53:21.408Z","type":"asciidoc"},"gitbook":{"version":"5.0.0","time":"2023-08-09T14:53:22.443Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"qrtool-encode(1)","level":"3.2","depth":1,"next":{"title":"qrtool-decode(1)","level":"3.3","depth":1,"path":"man/qrtool-decode.1.adoc","ref":"man/qrtool-decode.1.adoc","articles":[]},"previous":{"title":"qrtool(1)","level":"3.1","depth":1,"path":"man/qrtool.1.adoc","ref":"man/qrtool.1.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"doc/book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Shun Sakai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"qrtool Documentation","language":"en","gitbook":"*"},"file":{"path":"man/qrtool-encode.1.adoc","mtime":"2023-09-07T10:44:13.859Z","type":"asciidoc"},"gitbook":{"version":"5.1.0","time":"2023-09-07T10:44:14.700Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
