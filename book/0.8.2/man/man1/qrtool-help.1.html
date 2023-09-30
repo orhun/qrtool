@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>qrtool-encode(1) :: qrtool Documentation</title>
-    <link rel="canonical" href="https://sorairolake.github.io/qrtool/book/0.8.1/man/man1/qrtool-encode.1.html">
+    <title>qrtool-help(1) :: qrtool Documentation</title>
+    <link rel="canonical" href="https://sorairolake.github.io/qrtool/book/0.8.2/man/man1/qrtool-help.1.html">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../../_/css/site.css">
   </head>
@@ -48,7 +48,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="book" data-version="0.8.1">
+<div class="nav-container" data-component="book" data-version="0.8.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -56,14 +56,15 @@
     <h3 class="title"><a href="../../index.html">qrtool</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Installation</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../install.html">Installation</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../build.html">How to Build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../usage.html">Usage</a>
   </li>
 </ul>
   </li>
@@ -74,13 +75,13 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="qrtool.1.html"><code>qrtool(1)</code></a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="qrtool-encode.1.html"><code>qrtool-encode(1)</code></a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="qrtool-decode.1.html"><code>qrtool-decode(1)</code></a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="qrtool-help.1.html"><code>qrtool-help(1)</code></a>
   </li>
 </ul>
@@ -109,14 +110,14 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">qrtool</span>
-    <span class="version">0.8.1</span>
+    <span class="version">0.8.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <a class="title" href="../../index.html">qrtool</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../../index.html">0.8.1</a>
+          <a href="../../index.html">0.8.2</a>
         </li>
       </ul>
     </li>
@@ -133,26 +134,26 @@
   <ul>
     <li><a href="../../index.html">qrtool</a></li>
     <li>Manual pages</li>
-    <li><a href="qrtool-encode.1.html"><code>qrtool-encode(1)</code></a></li>
+    <li><a href="qrtool-help.1.html"><code>qrtool-help(1)</code></a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/sorairolake/qrtool/edit/HEAD/doc/book/modules/ROOT/pages/man/man1/qrtool-encode.1.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/sorairolake/qrtool/edit/HEAD/doc/book/modules/ROOT/pages/man/man1/qrtool-help.1.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">qrtool-encode(1)</h1>
+<h1 class="page">qrtool-help(1)</h1>
 <h2 id="_name">NAME</h2>
 <div class="sectionbody">
-<p>qrtool-encode - encode input data in a QR code</p>
+<p>qrtool-help - print the help for a command</p>
 </div>
 <div class="sect1">
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>SYNOPSIS</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>qrtool encode</strong> [<em>OPTION</em>]&#8230;&#8203; [<em>STRING</em>]</p>
+<p><strong>qrtool help</strong> [<em>COMMAND</em>]</p>
 </div>
 </div>
 </div>
@@ -160,8 +161,15 @@
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This command encodes input data in a QR code. By default, the result will be
-output to stdout.</p>
+<p>This command prints the help for a command.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">This command is identical to any of the following:</dt>
+<dd>
+<p>$ <strong>qrtool</strong> [<em>COMMAND</em>] <strong>-h</strong>|<strong>--help</strong></p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
@@ -170,179 +178,9 @@ output to stdout.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><em>STRING</em></dt>
+<dt class="hdlist1"><em>COMMAND</em></dt>
 <dd>
-<p>Input data. If <em>STRING</em> is not specified, data will be read from stdin.
-<em>STRING</em> must be a valid UTF-8 string. Use <strong>--read-from</strong> or read from stdin
-if taking other than a valid UTF-8 string. This positional argument conflicts
-with <strong>--read-from</strong>.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_options"><a class="anchor" href="#_options"></a>OPTIONS</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><strong>-o</strong>, <strong>--output</strong> <em>FILE</em></dt>
-<dd>
-<p>Output the result to a file.</p>
-</dd>
-<dt class="hdlist1"><strong>-r</strong>, <strong>--read-from</strong> <em>FILE</em></dt>
-<dd>
-<p>Read input data from a file. This option conflicts with <em>STRING</em>.</p>
-</dd>
-<dt class="hdlist1"><strong>-l</strong>, <strong>--error-correction-level</strong> <em>LEVEL</em></dt>
-<dd>
-<p>Error correction level.</p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">The possible values are:</dt>
-<dd>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><strong>l</strong></dt>
-<dd>
-<p>Level L. 7% of codewords can be restored.</p>
-</dd>
-<dt class="hdlist1"><strong>m</strong></dt>
-<dd>
-<p>Level M. 15% of codewords can be restored. This is the default value.</p>
-</dd>
-<dt class="hdlist1"><strong>q</strong></dt>
-<dd>
-<p>Level Q. 25% of codewords can be restored.</p>
-</dd>
-<dt class="hdlist1"><strong>h</strong></dt>
-<dd>
-<p>Level H. 30% of codewords can be restored.</p>
-</dd>
-</dl>
-</div>
-</dd>
-</dl>
-</div>
-</dd>
-<dt class="hdlist1"><strong>--level</strong> <em>LEVEL</em></dt>
-<dd>
-<p>Alias for <strong>-l</strong>, <strong>--error-correction-level</strong>.</p>
-</dd>
-<dt class="hdlist1"><strong>-v</strong>, <strong>--symbol-version</strong> <em>NUMBER</em></dt>
-<dd>
-<p>The version of the symbol. For normal QR code, <em>NUMBER</em> should be between <strong>1</strong>
-and <strong>40</strong>. For Micro QR code, <em>NUMBER</em> should be between <strong>1</strong> and <strong>4</strong>.</p>
-</dd>
-<dt class="hdlist1"><strong>--symversion</strong> <em>NUMBER</em></dt>
-<dd>
-<p>Alias for <strong>-v</strong>, <strong>--symbol-version</strong>.</p>
-</dd>
-<dt class="hdlist1"><strong>-m</strong>, <strong>--margin</strong> <em>NUMBER</em></dt>
-<dd>
-<p>The width of margin. Default is 4.</p>
-</dd>
-<dt class="hdlist1"><strong>-t</strong>, <strong>--type</strong> <em>FORMAT</em></dt>
-<dd>
-<p>The format of the output.</p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">The possible values are:</dt>
-<dd>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><strong>png</strong></dt>
-<dd>
-<p>Portable Network Graphics. This outputs 32-bit RGBA PNG image. This is
-the default value.</p>
-</dd>
-<dt class="hdlist1"><strong>svg</strong></dt>
-<dd>
-<p>Scalable Vector Graphics.</p>
-</dd>
-<dt class="hdlist1"><strong>terminal</strong></dt>
-<dd>
-<p>To the terminal as UTF-8 string.</p>
-</dd>
-</dl>
-</div>
-</dd>
-</dl>
-</div>
-</dd>
-<dt class="hdlist1"><strong>--mode</strong> <em>MODE</em></dt>
-<dd>
-<p>The mode of the output.</p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">The possible values are:</dt>
-<dd>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><strong>numeric</strong></dt>
-<dd>
-<p>All digits.</p>
-</dd>
-<dt class="hdlist1"><strong>alphanumeric</strong></dt>
-<dd>
-<p>Alphanumerics and few symbols.</p>
-</dd>
-<dt class="hdlist1"><strong>byte</strong></dt>
-<dd>
-<p>Arbitrary binary data. This is the default value.</p>
-</dd>
-<dt class="hdlist1"><strong>kanji</strong></dt>
-<dd>
-<p>Shift JIS text.</p>
-</dd>
-</dl>
-</div>
-</dd>
-</dl>
-</div>
-</dd>
-<dt class="hdlist1"><strong>--variant</strong> <em>TYPE</em></dt>
-<dd>
-<p>The type of QR code. This option requires <strong>--symbol-version</strong>.</p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">The possible values are:</dt>
-<dd>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><strong>normal</strong></dt>
-<dd>
-<p>Normal QR code. This is the default value.</p>
-</dd>
-<dt class="hdlist1"><strong>micro</strong></dt>
-<dd>
-<p>Micro QR code.</p>
-</dd>
-</dl>
-</div>
-</dd>
-</dl>
-</div>
-</dd>
-<dt class="hdlist1"><strong>--foreground</strong> <em>COLOR</em></dt>
-<dd>
-<p>Foreground color. <em>COLOR</em> takes a CSS color string. Default is black.</p>
-</dd>
-<dt class="hdlist1"><strong>--background</strong> <em>COLOR</em></dt>
-<dd>
-<p>Background color. <em>COLOR</em> takes a CSS color string. Default is white.</p>
-</dd>
-<dt class="hdlist1"><strong>--verbose</strong></dt>
-<dd>
-<p>Also print the metadata. It is output to stderr.</p>
-</dd>
-<dt class="hdlist1"><strong>-h</strong>, <strong>--help</strong></dt>
-<dd>
-<p>Print help information.</p>
-</dd>
-<dt class="hdlist1"><strong>-V</strong>, <strong>--version</strong></dt>
-<dd>
-<p>Print version information.</p>
+<p>Subcommand to print the help.</p>
 </dd>
 </dl>
 </div>
@@ -406,23 +244,6 @@ the default value.</p>
 <dd>
 <p><a href="https://www.qrcode.com/" class="bare">https://www.qrcode.com/</a></p>
 </dd>
-<dt class="hdlist1">CSS Color Module Level 4:</dt>
-<dd>
-<p><a href="https://www.w3.org/TR/css-color-4/" class="bare">https://www.w3.org/TR/css-color-4/</a></p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>EXAMPLES</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Encode the given string in a QR code:</dt>
-<dd>
-<p>$ <strong>qrtool encode "QR code" &gt; output.png</strong></p>
-</dd>
 </dl>
 </div>
 </div>
@@ -468,7 +289,7 @@ WARRANTY, to the extent permitted by law.</p>
 <h2 id="_see_also"><a class="anchor" href="#_see_also"></a>SEE ALSO</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>qrencode</strong>(1), <strong>qrtool</strong>(1), <strong>qrtool-decode</strong>(1), <strong>qrtool-help</strong>(1)</p>
+<p><strong>qrtool</strong>(1), <strong>qrtool-decode</strong>(1), <strong>qrtool-encode</strong>(1)</p>
 </div>
 </div>
 </div>

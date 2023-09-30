@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>qrtool-decode(1) :: qrtool Documentation</title>
-    <link rel="canonical" href="https://sorairolake.github.io/qrtool/book/0.8.1/man/man1/qrtool-decode.1.html">
+    <title>qrtool(1) :: qrtool Documentation</title>
+    <link rel="canonical" href="https://sorairolake.github.io/qrtool/book/0.8.2/man/man1/qrtool.1.html">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../../_/css/site.css">
   </head>
@@ -48,7 +48,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="book" data-version="0.8.1">
+<div class="nav-container" data-component="book" data-version="0.8.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -56,8 +56,6 @@
     <h3 class="title"><a href="../../index.html">qrtool</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Installation</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../install.html">Installation</a>
@@ -65,19 +63,22 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../build.html">How to Build</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../usage.html">Usage</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Manual pages</span>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="qrtool.1.html"><code>qrtool(1)</code></a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="qrtool-encode.1.html"><code>qrtool-encode(1)</code></a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="qrtool-decode.1.html"><code>qrtool-decode(1)</code></a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -109,14 +110,14 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">qrtool</span>
-    <span class="version">0.8.1</span>
+    <span class="version">0.8.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <a class="title" href="../../index.html">qrtool</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../../index.html">0.8.1</a>
+          <a href="../../index.html">0.8.2</a>
         </li>
       </ul>
     </li>
@@ -133,26 +134,26 @@
   <ul>
     <li><a href="../../index.html">qrtool</a></li>
     <li>Manual pages</li>
-    <li><a href="qrtool-decode.1.html"><code>qrtool-decode(1)</code></a></li>
+    <li><a href="qrtool.1.html"><code>qrtool(1)</code></a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/sorairolake/qrtool/edit/HEAD/doc/book/modules/ROOT/pages/man/man1/qrtool-decode.1.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/sorairolake/qrtool/edit/HEAD/doc/book/modules/ROOT/pages/man/man1/qrtool.1.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">qrtool-decode(1)</h1>
+<h1 class="page">qrtool(1)</h1>
 <h2 id="_name">NAME</h2>
 <div class="sectionbody">
-<p>qrtool-decode - detect and decode a QR code</p>
+<p>qrtool - an utility for encoding or decoding QR code</p>
 </div>
 <div class="sect1">
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>SYNOPSIS</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>qrtool decode</strong> [<em>OPTION</em>]&#8230;&#8203; [<em>IMAGE</em>]</p>
+<p><strong>qrtool</strong> [<em>OPTION</em>]&#8230;&#8203; <em>COMMAND</em></p>
 </div>
 </div>
 </div>
@@ -160,24 +161,26 @@
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This command detects and decodes a QR code. By default, the result will be
-output to stdout.</p>
+<p><strong>qrtool</strong> is a command-line utility for encoding or decoding QR code.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_positional_arguments"><a class="anchor" href="#_positional_arguments"></a>POSITIONAL ARGUMENTS</h2>
+<h2 id="_commands"><a class="anchor" href="#_commands"></a>COMMANDS</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><em>IMAGE</em></dt>
+<dt class="hdlist1"><strong>qrtool-encode</strong>(1)</dt>
 <dd>
-<p>Input image file. If <em>IMAGE</em> is not specified, or if "-" is specified, the
-image will be read from stdin. Supported raster image formats are based on
-the formats supported by the image crate. The format of <em>IMAGE</em> is determined
-based on the extension or the magic number if possible. If the format cannot
-be determined, use <strong>--type</strong>. Note that the SVG image is rasterized before
-scanning.</p>
+<p>Encode input data in a QR code.</p>
+</dd>
+<dt class="hdlist1"><strong>qrtool-decode</strong>(1)</dt>
+<dd>
+<p>Detect and decode a QR code.</p>
+</dd>
+<dt class="hdlist1"><strong>qrtool-help</strong>(1)</dt>
+<dd>
+<p>Print the help for a command.</p>
 </dd>
 </dl>
 </div>
@@ -188,93 +191,6 @@ scanning.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><strong>-t</strong>, <strong>--type</strong> <em>FORMAT</em></dt>
-<dd>
-<p>The format of the input. If <em>FORMAT</em> is not specified, the format is
-determined based on the extension or the magic number.</p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">The possible values are:</dt>
-<dd>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><strong>bmp</strong></dt>
-<dd>
-<p>Windows Bitmap.</p>
-</dd>
-<dt class="hdlist1"><strong>dds</strong></dt>
-<dd>
-<p>DirectDraw Surface.</p>
-</dd>
-<dt class="hdlist1"><strong>farbfeld</strong></dt>
-<dd>
-<p>Farbfeld.</p>
-</dd>
-<dt class="hdlist1"><strong>gif</strong></dt>
-<dd>
-<p>Graphics Interchange Format.</p>
-</dd>
-<dt class="hdlist1"><strong>hdr</strong></dt>
-<dd>
-<p>Radiance RGBE.</p>
-</dd>
-<dt class="hdlist1"><strong>ico</strong></dt>
-<dd>
-<p>ICO file format. This value also includes the CUR file format.</p>
-</dd>
-<dt class="hdlist1"><strong>jpeg</strong></dt>
-<dd>
-<p>JPEG.</p>
-</dd>
-<dt class="hdlist1"><strong>openexr</strong></dt>
-<dd>
-<p>OpenEXR.</p>
-</dd>
-<dt class="hdlist1"><strong>png</strong></dt>
-<dd>
-<p>Portable Network Graphics.</p>
-</dd>
-<dt class="hdlist1"><strong>pnm</strong></dt>
-<dd>
-<p>Portable Anymap Format.</p>
-</dd>
-<dt class="hdlist1"><strong>qoi</strong></dt>
-<dd>
-<p>Quite OK Image Format.</p>
-</dd>
-<dt class="hdlist1"><strong>svg</strong></dt>
-<dd>
-<p>Scalable Vector Graphics. This value also includes the gzip-compressed
-SVG image.</p>
-</dd>
-<dt class="hdlist1"><strong>tga</strong></dt>
-<dd>
-<p>Truevision TGA.</p>
-</dd>
-<dt class="hdlist1"><strong>tiff</strong></dt>
-<dd>
-<p>Tag Image File Format.</p>
-</dd>
-<dt class="hdlist1"><strong>webp</strong></dt>
-<dd>
-<p>WebP.</p>
-</dd>
-</dl>
-</div>
-</dd>
-</dl>
-</div>
-</dd>
-<dt class="hdlist1"><strong>--verbose</strong></dt>
-<dd>
-<p>Also print the metadata. It is output to stderr. This option conflicts with
-<strong>--metadata</strong>.</p>
-</dd>
-<dt class="hdlist1"><strong>--metadata</strong></dt>
-<dd>
-<p>Print only the metadata. It is output to stderr. This option conflicts with
-<strong>--verbose</strong>.</p>
-</dd>
 <dt class="hdlist1"><strong>-h</strong>, <strong>--help</strong></dt>
 <dd>
 <p>Print help information.</p>
@@ -282,6 +198,45 @@ SVG image.</p>
 <dt class="hdlist1"><strong>-V</strong>, <strong>--version</strong></dt>
 <dd>
 <p>Print version information.</p>
+</dd>
+<dt class="hdlist1"><strong>--generate-completion</strong> <em>SHELL</em></dt>
+<dd>
+<p>Generate shell completion. The completion is output to stdout.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">The possible values are:</dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>bash</strong></dt>
+<dd>
+<p>Bash.</p>
+</dd>
+<dt class="hdlist1"><strong>elvish</strong></dt>
+<dd>
+<p>Elvish.</p>
+</dd>
+<dt class="hdlist1"><strong>fish</strong></dt>
+<dd>
+<p>fish.</p>
+</dd>
+<dt class="hdlist1"><strong>nushell</strong></dt>
+<dd>
+<p>Nushell.</p>
+</dd>
+<dt class="hdlist1"><strong>powershell</strong></dt>
+<dd>
+<p>PowerShell.</p>
+</dd>
+<dt class="hdlist1"><strong>zsh</strong></dt>
+<dd>
+<p>Zsh.</p>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
 </dd>
 </dl>
 </div>
@@ -345,23 +300,6 @@ SVG image.</p>
 <dd>
 <p><a href="https://www.qrcode.com/" class="bare">https://www.qrcode.com/</a></p>
 </dd>
-<dt class="hdlist1">image crate:</dt>
-<dd>
-<p><a href="https://crates.io/crates/image" class="bare">https://crates.io/crates/image</a></p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>EXAMPLES</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Detect and decode a QR code from the given image:</dt>
-<dd>
-<p>$ <strong>qrtool decode input.png</strong></p>
-</dd>
 </dl>
 </div>
 </div>
@@ -400,14 +338,6 @@ Attribution 4.0 International Public License.</p>
 <div class="paragraph">
 <p>This is free software: you are free to change and redistribute it. There is NO
 WARRANTY, to the extent permitted by law.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_see_also"><a class="anchor" href="#_see_also"></a>SEE ALSO</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>qrtool</strong>(1), <strong>qrtool-encode</strong>(1), <strong>qrtool-help</strong>(1), <strong>zbarimg</strong>(1)</p>
 </div>
 </div>
 </div>

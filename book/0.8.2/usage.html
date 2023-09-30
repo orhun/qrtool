@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Contribution Guide :: qrtool Documentation</title>
-    <link rel="canonical" href="https://sorairolake.github.io/qrtool/book/0.8.1/contributing.html">
+    <title>Usage :: qrtool Documentation</title>
+    <link rel="canonical" href="https://sorairolake.github.io/qrtool/book/0.8.2/usage.html">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -48,7 +48,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="book" data-version="0.8.1">
+<div class="nav-container" data-component="book" data-version="0.8.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -56,14 +56,15 @@
     <h3 class="title"><a href="index.html">qrtool</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Installation</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="install.html">Installation</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="build.html">How to Build</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="usage.html">Usage</a>
   </li>
 </ul>
   </li>
@@ -92,7 +93,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="changelog.html">Changelog</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="contributing.html">Contribution Guide</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -109,14 +110,14 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">qrtool</span>
-    <span class="version">0.8.1</span>
+    <span class="version">0.8.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <a class="title" href="index.html">qrtool</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">0.8.1</a>
+          <a href="index.html">0.8.2</a>
         </li>
       </ul>
     </li>
@@ -132,63 +133,147 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">qrtool</a></li>
-    <li>Resources</li>
-    <li><a href="contributing.html">Contribution Guide</a></li>
+    <li><a href="usage.html">Usage</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/sorairolake/qrtool/edit/HEAD/doc/book/modules/ROOT/pages/contributing.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/sorairolake/qrtool/edit/HEAD/doc/book/modules/ROOT/pages/usage.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Contribution Guide</h1>
+<h1 class="page">Usage</h1>
 <div class="sect1">
-<h2 id="_branching_model"><a class="anchor" href="#_branching_model"></a>Branching model</h2>
+<h2 id="_basic_usage"><a class="anchor" href="#_basic_usage"></a>Basic usage</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>The branching model of this project is based on the <a href="https://nvie.com/posts/a-successful-git-branching-model/">git-flow</a>.</p>
+<div class="listingblock">
+<div class="title">Encode a string in a QR code</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">qrtool encode "QR code" &gt; output.png</code></pre>
 </div>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/basic.png" alt="Output">
 </div>
-<div class="sect1">
-<h2 id="_style_guides"><a class="anchor" href="#_style_guides"></a>Style guides</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_commit_message"><a class="anchor" href="#_commit_message"></a>Commit message</h3>
-<div class="paragraph">
-<p>Please see the <a href="https://github.com/RomuloOliveira/commit-messages-guide">Commit messages guide</a>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_development"><a class="anchor" href="#_development"></a>Development</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_useful_development_tools"><a class="anchor" href="#_useful_development_tools"></a>Useful development tools</h3>
-<div class="paragraph">
-<p>The <a href="https://github.com/casey/just">just</a> command runner can be used. Run
-<code>just --list</code> for more details.</p>
+<div class="title">Figure 1. Generate this image</div>
 </div>
 <div class="listingblock">
-<div class="title">Run tests</div>
+<div class="title">Decode a QR code from this image</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">just test</code></pre>
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">qrtool decode output.png</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Output</div>
+<div class="content">
+<pre>QR code</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_svg_generation"><a class="anchor" href="#_svg_generation"></a>SVG generation</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">qrtool encode -o output.svg -t svg "QR code"</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/decode.svg" alt="Output">
+</div>
+<div class="title">Figure 2. Generate this image</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_micro_qr_code_generation"><a class="anchor" href="#_micro_qr_code_generation"></a>Micro QR code generation</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">qrtool encode -v 3 --variant micro "QR code" &gt; output.png</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/micro.png" alt="Output">
+</div>
+<div class="title">Figure 3. Generate this image</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_colored_output"><a class="anchor" href="#_colored_output"></a>Colored output</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">qrtool encode --foreground brown "QR code" &gt; output.png</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/fg.png" alt="Output">
+</div>
+<div class="title">Figure 4. Generate this image</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_generate_shell_completion"><a class="anchor" href="#_generate_shell_completion"></a>Generate shell completion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>--generate-completion</code> option generates shell completions to stdout.</p>
+</div>
+<div class="ulist">
+<div class="title">The following shells are supported</div>
+<ul>
+<li>
+<p><code>bash</code></p>
+</li>
+<li>
+<p><code>elvish</code></p>
+</li>
+<li>
+<p><code>fish</code></p>
+</li>
+<li>
+<p><code>nushell</code></p>
+</li>
+<li>
+<p><code>powershell</code></p>
+</li>
+<li>
+<p><code>zsh</code></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">qrtool --generate-completion bash &gt; qrtool.bash</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_integration_with_other_programs"><a class="anchor" href="#_integration_with_other_programs"></a>Integration with other programs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Both <code>encode</code> and <code>decode</code> can read from stdin and output to stdout.</p>
+</div>
+<div class="listingblock">
+<div class="title">The following example, the encoded result is saved as a JPEG XL image</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">cat Cargo.toml | qrtool encode | magick png:- output.jxl</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Run the formatter</div>
+<div class="title">The following example, the decoded result is displayed by <code>bat</code></div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">just fmt</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Run the linter</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">just lint</code></pre>
-</div>
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">magick output.jxl png:- | qrtool decode | bat -l toml</code></pre>
 </div>
 </div>
 </div>
