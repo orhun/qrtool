@@ -111,16 +111,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">qrtool</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <a class="title" href="index.html">qrtool</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
     </li>
   </ul>
 </div>
@@ -159,12 +154,17 @@ project adheres to <a href="https://semver.org/">Semantic Versioning</a>.</p>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_0_8_4_2023_11_29">0.8.4 - 2023-11-29</a>
+<li><a href="#_0_8_6_2023_12_03">0.8.6 - 2023-12-03</a>
+<ul class="sectlevel2">
+<li><a href="#_fixed">Fixed</a></li>
+</ul>
+</li>
+<li><a href="#_0_8_5_2023_11_29">0.8.5 - 2023-11-29</a>
 <ul class="sectlevel2">
 <li><a href="#_changed">Changed</a></li>
 </ul>
 </li>
-<li><a href="#_0_8_3_2023_11_04">0.8.3 - 2023-11-04</a>
+<li><a href="#_0_8_4_2023_11_04">0.8.4 - 2023-11-04</a>
 <ul class="sectlevel2">
 <li><a href="#_added">Added</a></li>
 </ul>
@@ -207,7 +207,7 @@ project adheres to <a href="https://semver.org/">Semantic Versioning</a>.</p>
 <li><a href="#_0_7_2_2023_07_18">0.7.2 - 2023-07-18</a>
 <ul class="sectlevel2">
 <li><a href="#_changed_6">Changed</a></li>
-<li><a href="#_fixed">Fixed</a></li>
+<li><a href="#_fixed_2">Fixed</a></li>
 </ul>
 </li>
 <li><a href="#_0_7_1_2023_07_17">0.7.1 - 2023-07-17</a>
@@ -239,18 +239,18 @@ project adheres to <a href="https://semver.org/">Semantic Versioning</a>.</p>
 </li>
 <li><a href="#_0_5_1_2023_01_30">0.5.1 - 2023-01-30</a>
 <ul class="sectlevel2">
-<li><a href="#_fixed_2">Fixed</a></li>
+<li><a href="#_fixed_3">Fixed</a></li>
 </ul>
 </li>
 <li><a href="#_0_5_0_2023_01_28">0.5.0 - 2023-01-28</a>
 <ul class="sectlevel2">
 <li><a href="#_changed_11">Changed</a></li>
-<li><a href="#_fixed_3">Fixed</a></li>
+<li><a href="#_fixed_4">Fixed</a></li>
 </ul>
 </li>
 <li><a href="#_0_4_3_2022_12_10">0.4.3 - 2022-12-10</a>
 <ul class="sectlevel2">
-<li><a href="#_fixed_4">Fixed</a></li>
+<li><a href="#_fixed_5">Fixed</a></li>
 </ul>
 </li>
 <li><a href="#_0_4_2_2022_11_24">0.4.2 - 2022-11-24</a>
@@ -281,7 +281,7 @@ project adheres to <a href="https://semver.org/">Semantic Versioning</a>.</p>
 </li>
 <li><a href="#_0_3_1_2022_08_27">0.3.1 - 2022-08-27</a>
 <ul class="sectlevel2">
-<li><a href="#_fixed_5">Fixed</a></li>
+<li><a href="#_fixed_6">Fixed</a></li>
 </ul>
 </li>
 <li><a href="#_0_3_0_2022_08_26_yanked">0.3.0 - 2022-08-26 [YANKED]</a>
@@ -289,7 +289,7 @@ project adheres to <a href="https://semver.org/">Semantic Versioning</a>.</p>
 <li><a href="#_added_8">Added</a></li>
 <li><a href="#_changed_17">Changed</a></li>
 <li><a href="#_removed_2">Removed</a></li>
-<li><a href="#_fixed_6">Fixed</a></li>
+<li><a href="#_fixed_7">Fixed</a></li>
 </ul>
 </li>
 <li><a href="#_0_2_0_2022_08_22">0.2.0 - 2022-08-22</a>
@@ -307,7 +307,23 @@ project adheres to <a href="https://semver.org/">Semantic Versioning</a>.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_0_8_4_2023_11_29"><a class="anchor" href="#_0_8_4_2023_11_29"></a><a href="https://github.com/sorairolake/qrtool/compare/v0.8.3...v0.8.4">0.8.4</a> - 2023-11-29</h2>
+<h2 id="_0_8_6_2023_12_03"><a class="anchor" href="#_0_8_6_2023_12_03"></a><a href="https://github.com/sorairolake/qrtool/compare/v0.8.5...v0.8.6">0.8.6</a> - 2023-12-03</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_fixed"><a class="anchor" href="#_fixed"></a>Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix an issue where the input format is always determined to be SVG, if the
+input file extension represented SVG (<a href="https://github.com/sorairolake/qrtool/pull/285">#285</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_0_8_5_2023_11_29"><a class="anchor" href="#_0_8_5_2023_11_29"></a><a href="https://github.com/sorairolake/qrtool/compare/v0.8.4...v0.8.5">0.8.5</a> - 2023-11-29</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_changed"><a class="anchor" href="#_changed"></a>Changed</h3>
@@ -322,7 +338,7 @@ project adheres to <a href="https://semver.org/">Semantic Versioning</a>.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_0_8_3_2023_11_04"><a class="anchor" href="#_0_8_3_2023_11_04"></a><a href="https://github.com/sorairolake/qrtool/compare/v0.8.2...v0.8.3">0.8.3</a> - 2023-11-04</h2>
+<h2 id="_0_8_4_2023_11_04"><a class="anchor" href="#_0_8_4_2023_11_04"></a><a href="https://github.com/sorairolake/qrtool/compare/v0.8.3...v0.8.4">0.8.4</a> - 2023-11-04</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_added"><a class="anchor" href="#_added"></a>Added</h3>
@@ -470,7 +486,7 @@ Specification (<a href="https://github.com/sorairolake/qrtool/pull/166">#166</a>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_fixed"><a class="anchor" href="#_fixed"></a>Fixed</h3>
+<h3 id="_fixed_2"><a class="anchor" href="#_fixed_2"></a>Fixed</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -594,7 +610,7 @@ Specification (<a href="https://github.com/sorairolake/qrtool/pull/166">#166</a>
 <h2 id="_0_5_1_2023_01_30"><a class="anchor" href="#_0_5_1_2023_01_30"></a><a href="https://github.com/sorairolake/qrtool/compare/v0.5.0...v0.5.1">0.5.1</a> - 2023-01-30</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_fixed_2"><a class="anchor" href="#_fixed_2"></a>Fixed</h3>
+<h3 id="_fixed_3"><a class="anchor" href="#_fixed_3"></a>Fixed</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -625,7 +641,7 @@ Specification (<a href="https://github.com/sorairolake/qrtool/pull/166">#166</a>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_fixed_3"><a class="anchor" href="#_fixed_3"></a>Fixed</h3>
+<h3 id="_fixed_4"><a class="anchor" href="#_fixed_4"></a>Fixed</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -640,7 +656,7 @@ Specification (<a href="https://github.com/sorairolake/qrtool/pull/166">#166</a>
 <h2 id="_0_4_3_2022_12_10"><a class="anchor" href="#_0_4_3_2022_12_10"></a><a href="https://github.com/sorairolake/qrtool/compare/v0.4.2...v0.4.3">0.4.3</a> - 2022-12-10</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_fixed_4"><a class="anchor" href="#_fixed_4"></a>Fixed</h3>
+<h3 id="_fixed_5"><a class="anchor" href="#_fixed_5"></a>Fixed</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -740,7 +756,7 @@ Specification (<a href="https://github.com/sorairolake/qrtool/pull/166">#166</a>
 <h2 id="_0_3_1_2022_08_27"><a class="anchor" href="#_0_3_1_2022_08_27"></a><a href="https://github.com/sorairolake/qrtool/compare/v0.3.0...v0.3.1">0.3.1</a> - 2022-08-27</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_fixed_5"><a class="anchor" href="#_fixed_5"></a>Fixed</h3>
+<h3 id="_fixed_6"><a class="anchor" href="#_fixed_6"></a>Fixed</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -797,7 +813,7 @@ version 0.24. Thanks to <a href="https://github.com/qm3ster">@qm3ster</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_fixed_6"><a class="anchor" href="#_fixed_6"></a>Fixed</h3>
+<h3 id="_fixed_7"><a class="anchor" href="#_fixed_7"></a>Fixed</h3>
 <div class="ulist">
 <ul>
 <li>
