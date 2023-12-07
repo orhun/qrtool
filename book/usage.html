@@ -172,6 +172,10 @@
 <div class="sect1">
 <h2 id="_svg_generation"><a class="anchor" href="#_svg_generation"></a>SVG generation</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Use <code>-t</code> option to change the format of the generated image. The format is
+<code>png</code> (default), <code>svg</code> or <code>terminal</code> (to the terminal as UTF-8 string).</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">qrtool encode -o output.svg -t svg "QR code"</code></pre>
@@ -188,6 +192,10 @@
 <div class="sect1">
 <h2 id="_micro_qr_code_generation"><a class="anchor" href="#_micro_qr_code_generation"></a>Micro QR code generation</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Use <code>--variant</code> option to change the variant of the generated QR code. The
+variant is <code>normal</code> (default) or <code>micro</code> (Micro QR code).</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">qrtool encode -v 3 --variant micro "QR code" &gt; output.png</code></pre>
@@ -204,6 +212,13 @@
 <div class="sect1">
 <h2 id="_colored_output"><a class="anchor" href="#_colored_output"></a>Colored output</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Use <code>--foreground</code> and <code>--background</code> options to change the foreground and
+background colors of the generated image. These options takes a
+<a href="https://www.w3.org/TR/css-color-4/">CSS color string</a> such as <code>brown</code>, <code>#a52a2a</code> or
+<code>rgb(165 42 42)</code>. The default foreground color is black and the background
+color is white of CSS&#8217;s named colors.</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">qrtool encode --foreground brown "QR code" &gt; output.png</code></pre>
@@ -214,6 +229,89 @@
 <img src="_images/fg.png" alt="Output">
 </div>
 <div class="title">Figure 4. Generate this image</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_supported_input_image_formats"><a class="anchor" href="#_supported_input_image_formats"></a>Supported input image formats</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title"><code>qrtool decode</code> supports decoding a QR code from the following image formats</div>
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/BMP_file_format">BMP</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/DirectDraw_Surface">DDS</a></p>
+</li>
+<li>
+<p><a href="https://tools.suckless.org/farbfeld/">Farbfeld</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/GIF">GIF</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/RGBE_image_format">Radiance RGBE</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/ICO_(file_format)">ICO</a><sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</li>
+<li>
+<p><a href="https://jpeg.org/jpeg/">JPEG</a></p>
+</li>
+<li>
+<p><a href="https://openexr.com/">OpenEXR</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/PNG">PNG</a></p>
+</li>
+<li>
+<p><a href="https://netpbm.sourceforge.net/doc/pnm.html">PNM</a></p>
+</li>
+<li>
+<p><a href="https://qoiformat.org/">QOI</a></p>
+</li>
+<li>
+<p><a href="https://www.w3.org/Graphics/SVG/">SVG</a><sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Truevision_TGA">TGA</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/TIFF">TIFF</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/speed/webp/">WebP</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To support decoding from SVG image, the <code>decode-from-svg</code> feature must be
+enabled at compile time. Note that the SVG image is rasterized before scanning.</p>
+</div>
+<div class="paragraph">
+<p>Use <code>-t</code> option to specify the image format. If this option is not specified,
+the image format is determined based on the extension or the magic number.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/lossless.webp" alt="Input">
+</div>
+<div class="title">Figure 5. Input this WebP image</div>
+</div>
+<div class="listingblock">
+<div class="title">Decode a QR code from the WebP image</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">qrtool decode input.webp
+# or
+qrtool decode -t webp input.webp</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Output</div>
+<div class="content">
+<pre>QR code</pre>
+</div>
 </div>
 </div>
 </div>
@@ -272,6 +370,15 @@
 <pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">magick output.jxl png:- | qrtool decode | bat -l toml</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. CUR is also supported.
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. SVGZ is also supported.
 </div>
 </div>
 </article>
