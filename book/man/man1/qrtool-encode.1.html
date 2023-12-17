@@ -196,7 +196,9 @@ with <strong>--read-from</strong>.</p>
 </dd>
 <dt class="hdlist1"><strong>-s</strong>, <strong>--size</strong> <em>NUMBER</em></dt>
 <dd>
-<p>The module size in pixels. Default is 8.</p>
+<p>The module size in pixels. If this option is not specified, the module size
+is 8 when the output format is PNG or SVG, and 1 when the output format is
+UTF-8 string.</p>
 </dd>
 <dt class="hdlist1"><strong>-l</strong>, <strong>--error-correction-level</strong> <em>LEVEL</em></dt>
 <dd>
@@ -246,7 +248,8 @@ should be between <strong>1</strong> and <strong>4</strong>.</p>
 </dd>
 <dt class="hdlist1"><strong>-m</strong>, <strong>--margin</strong> <em>NUMBER</em></dt>
 <dd>
-<p>The width of margin. Default is 4.</p>
+<p>The width of margin. If this option is not specified, the margin will be 4
+for normal QR code and 2 for Micro QR code.</p>
 </dd>
 <dt class="hdlist1"><strong>-t</strong>, <strong>--type</strong> <em>FORMAT</em></dt>
 <dd>
@@ -333,11 +336,13 @@ encoding. This option requires <strong>--symbol-version</strong>.</p>
 </dd>
 <dt class="hdlist1"><strong>--foreground</strong> <em>COLOR</em></dt>
 <dd>
-<p>Foreground color. <em>COLOR</em> takes a CSS color string. Default is black.</p>
+<p>Foreground color. <em>COLOR</em> takes a CSS color string. Colored output is only
+available when the output format is PNG or SVG. Default is black.</p>
 </dd>
 <dt class="hdlist1"><strong>--background</strong> <em>COLOR</em></dt>
 <dd>
-<p>Background color. <em>COLOR</em> takes a CSS color string. Default is white.</p>
+<p>Background color. <em>COLOR</em> takes a CSS color string. Colored output is only
+available when the output format is PNG or SVG. Default is white.</p>
 </dd>
 <dt class="hdlist1"><strong>--verbose</strong></dt>
 <dd>
